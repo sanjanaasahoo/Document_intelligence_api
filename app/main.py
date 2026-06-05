@@ -79,9 +79,17 @@ async def parse_pdf(file: UploadFile = File(...)):
 
         # Step 5: Layer 2 — Groq fills the missing ones
         groq_result = extract_with_groq(cleaned_text, missing_fields)
+
+        final_result = {}
+
         for key, value in regex_result.items():
             if value is not None and value != "" and value != []:
                 final_result[key] = value
+
+        for key, value in groq_result.items():
+            if key not in final_result:
+                if value is not None and value != "" and value != []:
+                    final_result[key] = value
 
         for key, value in groq_result.items():
             if key not in final_result:

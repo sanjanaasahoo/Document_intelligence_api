@@ -1,0 +1,6 @@
+INFO:     127.0.0.1:49346 - "POST /parse-pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62562 - "POST /parse-pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65085 - "POST /parse-pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51276 - "POST /parse-pdf HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:56132 - "POST /parse-pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58599 - "GET / HTTP/1.1" 200 OK
