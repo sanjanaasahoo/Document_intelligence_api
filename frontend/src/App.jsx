@@ -19,6 +19,7 @@ import Sidebar from "./components/Sidebar";
 import UploadCard from "./components/UploadCard";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api";
+console.log("API URL:", API_BASE_URL);
 
 const viewLabels = {
   dashboard: "Dashboard",

@@ -10,8 +10,7 @@ from app.groq_extractor import extract_with_groq
 app = FastAPI(
     title="Document Intelligence API",
     description=(
-        "Upload any PDF — invoice, purchase order, contract, receipt, report, form — "
-        "and receive only the important fields as structured JSON."
+        "Upload any PDF and receive structured JSON"
     ),
     version="3.0.0"
 )
