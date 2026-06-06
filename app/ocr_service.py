@@ -93,13 +93,10 @@ def extract_text_from_scanned_pdf(pdf_path: str) -> str:
 # ─── UNIFIED ENTRY POINT ───────────────────────────────────────────────────────
 
 def extract_text(pdf_path: str) -> tuple[str, str]:
-    """
-    Single function called by main.py.
-    Detects PDF type, routes to the correct extractor, returns:
-        - extracted text
-        - pdf_type string ("text" or "scanned") for the API response
-    """
+
     if is_text_pdf(pdf_path):
         return extract_text_from_text_pdf(pdf_path), "text"
-    else:
-        return extract_text_from_scanned_pdf(pdf_path), "scanned"
+
+    raise Exception(
+        "Scanned PDFs are not supported in cloud deployment."
+    )
